@@ -22,7 +22,6 @@ où :
 - \( m \) est le nombre total d'arêtes,
 - $$\( \delta(C_i, C_j) \)$$ est une fonction qui vaut 1 si les nœuds \( i \) et \( j \) appartiennent à la même communauté, et 0 sinon.
 
-
 ### Principe de la méthode de Louvain
 
 La méthode de Louvain est un algorithme itératif qui vise à maximiser la modularité. Elle se déroule en deux phases :
@@ -32,3 +31,7 @@ La méthode de Louvain est un algorithme itératif qui vise à maximiser la modu
 2. **Phase d'agrégation** : Une fois que la modularité ne peut plus être améliorée par des réaffectations locales, les communautés sont agrégées pour former un nouveau réseau, où chaque communauté est représentée par un nœud unique. L'algorithme répète ensuite les étapes ci-dessus sur ce nouveau réseau.
 
 Ce processus se poursuit jusqu'à ce que la modularité atteigne un maximum, permettant ainsi de révéler la structure communautaire sous-jacente du réseau.
+
+### Comparaison des algorithmes( résultats sur le scrypt de louvain)
+
+Sur les données de petites tailles, les algorithmes de Louvain et de Clauset et al. montrent tous deux une efficacité comparable. Cependant, lorsque la taille des données est grande, la modularité de la méthode de Clauset et al. devient négligeable par rapport à celle de Louvain. De plus, la complexité de l'algorithme de Louvain est plus faible que celle de Clauset et al.
